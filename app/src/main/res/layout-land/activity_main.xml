@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/text_num"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:onClick="viewHistory"
+            android:text="История"
+            android:textSize="8sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/text_num2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ellipsize="start"
+            android:gravity="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/darkGray"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/text_num"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/text_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="start"
+        android:gravity="end"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+
+                android:id="@+id/but_c"
+                style="@style/but_teme_notMetod"
+                android:onClick="clickC"
+                android:text="c" />
+
+            <Button
+                android:id="@+id/but_del"
+                style="@style/but_teme_notMetod"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:onClick="clickDel"
+                android:text="del" />
+
+            <Button
+
+                android:id="@+id/but_sin"
+                style="@style/symb_start_but"
+                android:onClick="click_symb_start_but"
+                android:text="sin" />
+
+            <Button
+                android:id="@+id/but_cos"
+                style="@style/symb_start_but"
+                android:text="cos" />
+
+            <Button
+                android:id="@+id/but_tan"
+                style="@style/symb_start_but"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="tan" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/but_7"
+                style="@style/numButtons"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/but_8"
+                style="@style/numButtons"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/but_9"
+                style="@style/numButtons"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/but_delit"
+                style="@style/symb_not_start_but"
+                android:text="/" />
+
+            <Button
+                android:id="@+id/but_sqrt"
+                style="@style/symb_start_but"
+                android:text="√" />
+
+            <Button
+                android:id="@+id/but_pow"
+                style="@style/symb_not_start_but"
+                android:text="^" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/but_4"
+                style="@style/numButtons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/but_5"
+                style="@style/numButtons"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/but_6"
+                style="@style/numButtons"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/but_ymnoj"
+                style="@style/symb_not_start_but"
+                android:text="*" />
+
+            <Button
+                android:id="@+id/but_log"
+                style="@style/symb_start_but"
+                android:text="lg" />
+
+            <Button
+                android:id="@+id/but_ln"
+                style="@style/symb_start_but"
+                android:text="ln" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/but_1"
+                style="@style/numButtons"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/but_2"
+                style="@style/numButtons"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/but_3"
+                style="@style/numButtons"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/but_minus"
+                style="@style/symb_start_but"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/but_ctg"
+                style="@style/symb_not_start_but"
+                android:text="%" />
+
+            <Button
+                android:id="@+id/but_fact"
+                style="@style/symb_not_start_but"
+                android:text="!" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/but_0"
+                style="@style/numButtons"
+                android:onClick="click_symb_start_but"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/but_tchk"
+                style="@style/numButtons"
+                android:text="." />
+
+            <Button
+                android:id="@+id/but_ravno"
+                style="@style/but_teme_notMetod"
+                android:onClick="clickRavno"
+                android:text="=" />
+
+            <Button
+                android:id="@+id/but_plus"
+                style="@style/symb_not_start_but"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/but_open"
+                style="@style/symb_start_but"
+                android:text="(" />
+
+            <Button
+                android:id="@+id/but_close"
+                style="@style/symb_start_but"
+                android:text=")" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
